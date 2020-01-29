@@ -1,0 +1,41 @@
+service: hotel-refugus # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: eu-central-1
+  timeout: 30
+  memorySize: 128
+  environment:
+    API_KEY: ${file(config.yaml):api_key}
+    LOGGING_LEVEL: DEBUG
+  tags:
+    Environment: hotel-refugus
+
+package:
+  include:
+    - "*.py*"
+    - places
+  exclude:
+    - ".*/**"
+    - node_modules
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    dockerImage: lambci/lambda:build-python3.7
+    pythonBin: /var/lang/bin/python
+    fileName: requirements_lambda.txt
+
+functions:
+  places:
+    handler: lambda.handler
+    events:
+      - http:
+          path: query
+          cors:
+            origin: '*'
+          method: post
+
+plugins:
+  - serverless-python-requirements
