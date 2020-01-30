@@ -42,13 +42,13 @@ Content-type: application/json
 ```
 
 ### URI Request Parameters
-The request requires the following URI parameters.
+The request supports the following URI parameters.
 
-**address** Postal Address
+**address** Postal Address (required)
 
-**area** Radius in meters within which to return results
+**area** Radius in meters within which to return results (required)
 
-**language**  The language code, indicating in which language the results should be returned, if possible. [List of support language codes](https://developers.google.com/maps/faq#languagesupport)
+**language**  The language code, indicating in which language the results should be returned, if possible. [List of support language codes](https://developers.google.com/maps/faq#languagesupport) (optional, default `en`)
 
 ### Response Syntax
 
