@@ -22,7 +22,9 @@ Execute `serverless deploy` to deploy the application into your AWS Account then
 
 http://hotel-refugus.s3-website.eu-central-1.amazonaws.com/
 
-Contents of the live demo are located under `frontend-emo`
+Contents of the live demo are located under `frontend-demo`
+
+**Note**: The API Gateway URL contains the stage name (e.g /dev/query), a [custom domain](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) must be used to remove it.
 
 ## API Method
 
