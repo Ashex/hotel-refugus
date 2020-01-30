@@ -4,9 +4,8 @@
 <script charset='utf-8' src='./assets/konami.js' type='text/javascript'></script>
 <script type="text/javascript">
   async function postData(url = '', data = {}) {
-    // Default options are marked with *
     const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      method: 'POST',
       mode: 'cors',
       cache: 'no-cache',
       headers: {
@@ -61,7 +60,7 @@ function renderTable(tabledata) {
 
 </script>
 <html>
-<!-- Initially make the nyancat div and the audio div invisible -->
+
 <style type='text/css'>
 div.kc{
 position:fixed;
@@ -85,14 +84,14 @@ display:none;
 }
 </style>
 
-<!-- The JS listener -->
+
 
 
 </head>
 <body onLoad='setupStuff();'>
-<!-- setupStuff() activates the listener -->
 
-<!-- The 2 divs in my body... both activated by the Konami code! :) -->
+
+
 <div class='secret' id='secret'></div>
 <div class='kc' id='kc'>
   <form id="backendServer">
