@@ -8,6 +8,7 @@ The hotel-refugus lookup demo has been designed as a python 3.7 Lambda function 
 * Serverless Framework (minimum 1.61.3)
     * [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements) plugin
 * [Google Maps Python SDK](https://github.com/googlemaps/google-maps-services-python)
+* [Google Maps API Key](https://developers.google.com/places/web-service/get-api-key) (to interact with Places and Geocode API)
 * AWS Account
 
 ## Quick Start
